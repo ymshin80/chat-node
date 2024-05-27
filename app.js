@@ -23,7 +23,6 @@ wss.on("connection", (ws, req) => {
         const jsonData = JSON.parse(msg);
         jsonData.Name = user
         room.forwardMessage(jsonData);
-        console.log("msg", jsonData)
     })
 })
 wss.on("close",(ws, req) => {
